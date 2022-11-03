@@ -25,7 +25,7 @@ namespace Simple_Face_Recognition_App
         private Image<Bgr, Byte> currentFrame = null;
         Mat frame = new Mat();
         private bool facesDetectionEnabled = false;
-        CascadeClassifier faceCasacdeClassifier = new CascadeClassifier(@"C:\haarcascades\haarcascade_frontalface_alt_tree.xml");
+        CascadeClassifier faceCasacdeClassifier = new CascadeClassifier(@"C:\Users\karel.svbd\Documents\GitHub\ChinPong\docs\Simple-Face-Recognition-App-CS-master\Simple-Face-Recognition-App-CS-master\Simple Face Recognition App\haarcascade_frontalface_alt.xml");
         Image<Bgr, Byte> faceResult = null;
         List<Image<Gray, Byte>> TrainedFaces = new List<Image<Gray, byte>>();
         List<int> PersonsLabes = new List<int>();
@@ -70,13 +70,8 @@ namespace Simple_Face_Recognition_App
                     //Enhance the image to get better result
                     CvInvoke.EqualizeHist(grayImage, grayImage);
 
-                    Rectangle[] faces = faceCasacdeClassifier.DetectMultiScale(grayImage, 1.1, 3, Size.Empty, Size.Empty);
+                    Rectangle face = new Rectangle();
                     //If faces detected
-                    if (faces.Length > 0)
-                    {
-
-                        foreach (var face in faces)
-                        {
                             //Draw square around each face 
                            // CvInvoke.Rectangle(currentFrame, face, new Bgr(Color.Red).MCvScalar, 2);
 
@@ -140,8 +135,6 @@ namespace Simple_Face_Recognition_App
                                 }
                             }
                         }
-                    }
-                }
 
                 //Render the video capture into the Picture Box picCapture
                 picCapture.Image = currentFrame.Bitmap;
