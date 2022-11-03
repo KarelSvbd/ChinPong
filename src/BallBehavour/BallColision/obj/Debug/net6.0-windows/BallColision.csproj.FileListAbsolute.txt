@@ -1,0 +1,17 @@
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\bin\Debug\net6.0-windows\BallColision.exe
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\bin\Debug\net6.0-windows\BallColision.deps.json
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\bin\Debug\net6.0-windows\BallColision.runtimeconfig.json
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\bin\Debug\net6.0-windows\BallColision.dll
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\bin\Debug\net6.0-windows\BallColision.pdb
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.csproj.AssemblyReference.cache
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.Form1.resources
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.csproj.GenerateResource.cache
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.AssemblyInfoInputs.cache
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.AssemblyInfo.cs
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.csproj.CoreCompileInputs.cache
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.dll
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\refint\BallColision.dll
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.pdb
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\BallColision.genruntimeconfig.cache
+C:\Users\L\Desktop\AGRA\test\BallColision\ChinPong\src\BallBehavour\BallColision\obj\Debug\net6.0-windows\ref\BallColision.dll
