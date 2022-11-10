@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pbxCapture = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCapture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -36,16 +38,22 @@
             // 
             this.pbxCapture.Location = new System.Drawing.Point(12, 12);
             this.pbxCapture.Name = "pbxCapture";
-            this.pbxCapture.Size = new System.Drawing.Size(726, 621);
+            this.pbxCapture.Size = new System.Drawing.Size(730, 620);
             this.pbxCapture.TabIndex = 0;
             this.pbxCapture.TabStop = false;
             this.pbxCapture.Click += new System.EventHandler(this.pbxCapture_Click);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 16;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 645);
+            this.ClientSize = new System.Drawing.Size(1436, 705);
             this.Controls.Add(this.pbxCapture);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -57,6 +65,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbxCapture;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
