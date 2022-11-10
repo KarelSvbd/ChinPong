@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\L\\.nuget\\packages\\": {}
+    "C:\\Users\\karel.svbd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\L\\Desktop\\AGRA\\test\\BallColision\\ChinPong\\src\\BallBehavour\\BallColision\\BallColision.csproj",
+      "projectUniqueName": "C:\\Users\\karel.svbd\\Documents\\GitHub\\ChinPong\\src\\BallBehavour\\BallColision\\BallColision.csproj",
       "projectName": "BallColision",
-      "projectPath": "C:\\Users\\L\\Desktop\\AGRA\\test\\BallColision\\ChinPong\\src\\BallBehavour\\BallColision\\BallColision.csproj",
-      "packagesPath": "C:\\Users\\L\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\L\\Desktop\\AGRA\\test\\BallColision\\ChinPong\\src\\BallBehavour\\BallColision\\obj\\",
+      "projectPath": "C:\\Users\\karel.svbd\\Documents\\GitHub\\ChinPong\\src\\BallBehavour\\BallColision\\BallColision.csproj",
+      "packagesPath": "C:\\Users\\karel.svbd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\karel.svbd\\Documents\\GitHub\\ChinPong\\src\\BallBehavour\\BallColision\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\L\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\karel.svbd\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
