@@ -86,7 +86,6 @@ namespace BallColision
                 if (CurentPositionX + BALL_SIZE >= BarPositionX - (BAR_WIDTH / 2) && CurentPositionX + BALL_SIZE <= BarPositionX +(BAR_WIDTH / 2) && CurentPositionY + BALL_SIZE >= BarPositionY && CurentPositionY + BALL_SIZE <= BarPositionY + BAR_HEIGHT)
                 {
                     nextDirectionY *= VALUE_INVERSOR;
-                    UI.GainPoint();
                 }
             }
 

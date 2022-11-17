@@ -32,6 +32,8 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lblScore = new System.Windows.Forms.Label();
             this.lblLife = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.lblHighScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer
@@ -60,11 +62,33 @@
             this.lblLife.TabIndex = 3;
             this.lblLife.Text = "3";
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(659, 498);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "Restart";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // lblHighScore
+            // 
+            this.lblHighScore.AutoSize = true;
+            this.lblHighScore.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHighScore.Location = new System.Drawing.Point(665, 63);
+            this.lblHighScore.Name = "lblHighScore";
+            this.lblHighScore.Size = new System.Drawing.Size(69, 80);
+            this.lblHighScore.TabIndex = 5;
+            this.lblHighScore.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 660);
+            this.Controls.Add(this.lblHighScore);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblLife);
             this.Controls.Add(this.lblScore);
             this.Name = "Form1";
@@ -78,5 +102,7 @@
         private System.Windows.Forms.Timer timer;
         private Label lblScore;
         private Label lblLife;
+        private Button btnReset;
+        private Label lblHighScore;
     }
 }

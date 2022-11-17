@@ -21,6 +21,13 @@ namespace BallColision
             ground.NextDirection();
             lblLife.Text = game.Life.ToString();
             lblScore.Text = game.Score.ToString();
+            lblHighScore.Text = game.HighScore.ToString();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            game.Respawn();
+            ground.RespawnBall();
         }
     }
 }

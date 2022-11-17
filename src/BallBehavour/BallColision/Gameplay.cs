@@ -44,18 +44,17 @@ namespace BallColision
             Life--;
             if (Life <= 0)
             {
-               HighScore = Score;
-               GameOver();
-            }
-            else
-            {
-                Respawn();
+                if(Score > HighScore)
+                    HighScore = Score;
+                GameOver();
             }
         }
 
         public void Respawn()
         {
-            
+            Life = LIFE_BEGIN;
+            Score = POINT_BEGIN;
+            this.GameOver();
         }
 
         public int GainPoint()
