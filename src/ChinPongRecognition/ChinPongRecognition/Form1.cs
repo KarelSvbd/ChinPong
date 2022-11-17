@@ -9,50 +9,43 @@ namespace ChinPongRecognition
 {
     public partial class Form1 : Form
     {
-        BallBehaviour ballBehaviour;
-        private Capture videoCapture = null;
-        private Image<Bgr, Byte> currentFrame = null;
-        CascadeClassifier faceCasacdeClassifier = new CascadeClassifier(@"C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\haarcascade_frontalface_alt.xml");
-        Mat frame = new Mat();
+        BallBehaviour _ballBehaviour;
+        OpenCvProject _openCvProject;
+
+        public BallBehaviour BallBehaviour
+        {
+            get { return _ballBehaviour; }
+            private set { _ballBehaviour = value; }
+        }
+
+        public OpenCvProject OpenCvProject
+        {
+            get { return _openCvProject; }
+            private set { _openCvProject = value; }
+        }
 
 
         public Form1()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
-            ballBehaviour = new BallBehaviour();
-            ballBehaviour.Width = 730;
-            ballBehaviour.Height = 620;
-            ballBehaviour.Location = new Point(750, 10);
-            Controls.Add(ballBehaviour);
+            BallBehaviour = new BallBehaviour();
+            BallBehaviour.Width = 730;
+            BallBehaviour.Height = 620;
+            BallBehaviour.Location = new Point(750, 10);
+            OpenCvProject = new OpenCvProject(pbxCapture, BallBehaviour);
+            Controls.Add(BallBehaviour);
             StartGame();
         }
 
         private void StartGame()
         {
             //Creates a new video capture
-            videoCapture = new Capture();
+            OpenCvProject.StartCapture();
             //Execules continusoly
-            Application.Idle += ActualFrame;
-        }
-
-        private void ActualFrame(object sender, EventArgs e)
-        {
-            if (videoCapture != null && videoCapture.Ptr != IntPtr.Zero)
-            {
-                videoCapture.Retrieve(frame, 0);
-                //currentFrame = frame.ToImage<Bgr, Byte>().Resize(ballBehaviour.Width, ballBehaviour.Height, Inter.Cubic);
-                currentFrame = frame.ToImage<Bgr, Byte>().Resize(pbxCapture.Width, pbxCapture.Height, Inter.Cubic);
-                pbxCapture.Image = currentFrame.Bitmap;
-
-                Rectangle[] faces = faceCasacdeClassifier.DetectMultiScale(frame, 1.1, 1, Size.Empty, Size.Empty);
-                foreach (var face in faces)
-                {
-                    CvInvoke.Line(currentFrame, new Point(face.Left + 100,  face.Bottom + face.Height / 2), new Point(face.Right + 50, face.Bottom + face.Height / 2), new Bgr(Color.Green).MCvScalar, 20, new LineType(), 0);
-                    ballBehaviour.BarPositionX = ballBehaviour.Width - (face.Left + 100);
-                    ballBehaviour.BarPositionY = face.Bottom + 100;
-                }
-            }
+            Application.Idle += OpenCvProject.ActualFrame;
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\ressources\mainMusic.wav");
+            //player.Play();
         }
 
         private void pbxCapture_Click(object sender, EventArgs e)
@@ -62,7 +55,7 @@ namespace ChinPongRecognition
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            ballBehaviour.NextDirection();
+            BallBehaviour.NextDirection();
         }
     }
 }

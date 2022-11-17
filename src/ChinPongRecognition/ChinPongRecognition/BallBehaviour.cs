@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ChinPongRecognition
 {
-    internal class BallBehaviour : PictureBox
+    public class BallBehaviour : PictureBox
     {
         Color DEFAULT_COLOR = Color.Beige;
         Brush BALL_COLOR = new SolidBrush(Color.Red);
