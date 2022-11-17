@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/* Gameplay.cs
+ * Lachenal Ruben
+ * Classe qui gère le comportement du jeu, particulièrement l'UI
+ * 17/11/2022
+ */
 namespace ChinPongRecognition
 {
     public class Gameplay
@@ -28,6 +27,10 @@ namespace ChinPongRecognition
             HighScore = POINT_BEGIN;
         }
 
+        /// <summary>
+        /// Booléen qui indique si le jeu est en cours ou pas
+        /// </summary>
+        /// <returns>False si le jeu est en cours True si le joueur à perdu </returns>
         public bool GameOver()
         {
             if(Life <= 0)
@@ -38,7 +41,9 @@ namespace ChinPongRecognition
         }
 
         
-
+        /// <summary>
+        /// méthode qui enlève une vie au joueur, si en pérdant le joueur à battu le record il le stoque dans le highscore  
+        /// </summary>
         public void LoseLife()
         {
             Life--;
@@ -50,6 +55,9 @@ namespace ChinPongRecognition
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Respawn()
         {
             Life = LIFE_BEGIN;
@@ -57,6 +65,10 @@ namespace ChinPongRecognition
             this.GameOver();
         }
 
+        /// <summary>
+        /// Ajoute les points du joueur
+        /// </summary>
+        /// <returns>le score incrémenté</returns>
         public int GainPoint()
         {
             Score += POINT_INCREMENT;
