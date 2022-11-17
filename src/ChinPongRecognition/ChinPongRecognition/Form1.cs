@@ -1,6 +1,7 @@
 ﻿using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
+using OpenTK.Input;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -11,6 +12,7 @@ namespace ChinPongRecognition
     {
         BallBehaviour _ballBehaviour;
         OpenCvProject _openCvProject;
+        Gameplay _gameplay;
 
         public BallBehaviour BallBehaviour
         {
@@ -24,12 +26,20 @@ namespace ChinPongRecognition
             private set { _openCvProject = value; }
         }
 
+        public Gameplay Gameplay
+        {
+            get { return _gameplay;}
+            private set { _gameplay = value; }
+        }
+
 
         public Form1()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
-            BallBehaviour = new BallBehaviour();
+            Gameplay = new Gameplay();
+            BallBehaviour = new BallBehaviour(Gameplay);
+            
             BallBehaviour.Width = 730;
             BallBehaviour.Height = 620;
             BallBehaviour.Location = new Point(750, 10);
@@ -56,6 +66,9 @@ namespace ChinPongRecognition
         private void timer_Tick(object sender, EventArgs e)
         {
             BallBehaviour.NextDirection();
+            lblScore.Text = Gameplay.Score.ToString();
+            lblHighScore.Text = Gameplay.HighScore.ToString();
+            lblLives.Text = Gameplay.Life.ToString();
         }
     }
 }

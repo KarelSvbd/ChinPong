@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ecWYLcjRtPALKimHFANpQIZbhXjA5nRZH0g/bT9ZMHZnfffLbjosYPr4RnIDSy/HZN15GpLEp84cCJ0MyBDVKw==",
+  "dgSpecHash": "sCtd8s5EkGYGWN9OgZqALKPB87QyK4mVgI4BEUQ67Lhs09+2mAGbJX5bdDlMQ8SzDstuaoAAJ5bRwzBkIJrH2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\L\\Desktop\\AGRA\\test\\BallColision\\ChinPong\\src\\BallBehavour\\BallColision\\BallColision.csproj",
+  "projectFilePath": "C:\\Users\\karel.svbd\\Documents\\GitHub\\ChinPong\\src\\BallBehavour\\BallColision\\BallColision.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
