@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+/* BallBehaviour.cs
+ * Lachenal ruben
+ * Cette classe gère le comportement et la physique de la balle
+ * 17/11/2022
+ */ 
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using System.Windows.Forms;
 using OpenTK.Graphics.ES30;
 
@@ -59,6 +58,9 @@ namespace ChinPongRecognition
             GameOver = false;
         }
 
+        /// <summary>
+        /// Cette fonction va déplacer la balle lors de la frame suivante
+        /// </summary>
         public void NextDirection()
         {
             // tant que le jeu continue
@@ -105,6 +107,10 @@ namespace ChinPongRecognition
             Parent.Invalidate();
         }
 
+        /// <summary>
+        /// c'étais un test faut songer à l'éffacer
+        /// </summary>
+        /// <param name="e">OSEF</param>
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
@@ -115,11 +121,17 @@ namespace ChinPongRecognition
 
         }
 
+        /// <summary>
+        /// Détruit la balle mais je suis pas sur que cette méthode sert encore
+        /// </summary>
         public void DestroyBall()
         {
             ballExist = false;
         }
 
+        /// <summary>
+        /// méthode qui fait réaparaitre la balle à la position initiale
+        /// </summary>
         public void RespawnBall()
         {
             CurentPositionX = BALL_SPAWN_POSITION_X;
@@ -127,28 +139,20 @@ namespace ChinPongRecognition
             BallExist = true;
         }
 
-        protected override void OnPaint(PaintEventArgs p)
+        /// <summary>
+        /// méthode qui dessine la balle et la barre chaque frame
+        /// </summary>
+        /// <param name="pe"></param>
+        protected override void OnPaint(PaintEventArgs pe)
         {
+            base.OnPaint(pe);
 
-            base.OnPaint(p);
-
-            p.Graphics.Clear(DEFAULT_COLOR);
+            pe.Graphics.Clear(DEFAULT_COLOR);
 
             if (!UI.GameOver())
-            {
-                p.Graphics.FillEllipse(BALL_COLOR, new Rectangle(CurentPositionX, CurentPositionY, BALL_SIZE, BALL_SIZE));
-                GameOver = false;
-            } 
-            else
-            {
-                if (!GameOver)
-                {
-                    frmGameOver frm = new frmGameOver(UI.Score, UI.HighScore, UI);
-                    frm.Show();
-                    GameOver = true;
-                }
-            }
-            p.Graphics.FillRectangle(BAR_COLOR, new Rectangle(BarPositionX - (BAR_WIDTH / 2), BarPositionY, BAR_WIDTH, BAR_HEIGHT));
+                pe.Graphics.FillEllipse(BALL_COLOR, new Rectangle(CurentPositionX, CurentPositionY, BALL_SIZE, BALL_SIZE));
+
+            pe.Graphics.FillRectangle(BAR_COLOR, new Rectangle(BarPositionX - (BAR_WIDTH / 2), BarPositionY, BAR_WIDTH, BAR_HEIGHT));
         }
     }
 }
