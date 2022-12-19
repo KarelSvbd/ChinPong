@@ -128,7 +128,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbxCapture);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Game";
             ((System.ComponentModel.ISupportInitialize)(this.pbxCapture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

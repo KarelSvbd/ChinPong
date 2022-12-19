@@ -29,10 +29,11 @@ C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRe
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.csproj.AssemblyReference.cache
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.csproj.SuggestedBindingRedirects.cache
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.Form1.resources
+C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.frmGameOver.resources
+C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.MainMenu.resources
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.Properties.Resources.resources
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.csproj.GenerateResource.cache
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.csproj.CoreCompileInputs.cache
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.csproj.CopyComplete
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.exe
 C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.pdb
-C:\Users\karel.svbd\Documents\GitHub\ChinPong\src\ChinPongRecognition\ChinPongRecognition\obj\Debug\ChinPongRecognition.MainMenu.resources

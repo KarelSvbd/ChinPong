@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using System.Windows.Forms;
+using OpenTK.Graphics.ES30;
 
 namespace ChinPongRecognition
 {
@@ -16,6 +17,7 @@ namespace ChinPongRecognition
         Brush BAR_COLOR = new SolidBrush(Color.Blue);
 
         Gameplay _ui;
+        
         internal Gameplay UI { get => _ui; set => _ui = value; }
 
         const int BALL_SPAWN_POSITION_X = 20;
@@ -42,6 +44,10 @@ namespace ChinPongRecognition
         private int _barPositionY = 0;
         public int BarPositionY { get => _barPositionY; set => _barPositionY = value; }
 
+        private bool _gameOver;
+
+        public bool GameOver { get => _gameOver; set => _gameOver = value; }
+
         private int nextDirectionX = 1;
 
         private int nextDirectionY = 1;
@@ -50,6 +56,7 @@ namespace ChinPongRecognition
         {
             UI = pUI;
             ballExist = BALL_EXIST;
+            GameOver = false;
         }
 
         public void NextDirection()
@@ -122,13 +129,25 @@ namespace ChinPongRecognition
 
         protected override void OnPaint(PaintEventArgs p)
         {
+
             base.OnPaint(p);
 
             p.Graphics.Clear(DEFAULT_COLOR);
 
             if (!UI.GameOver())
+            {
                 p.Graphics.FillEllipse(BALL_COLOR, new Rectangle(CurentPositionX, CurentPositionY, BALL_SIZE, BALL_SIZE));
-
+                GameOver = false;
+            } 
+            else
+            {
+                if (!GameOver)
+                {
+                    frmGameOver frm = new frmGameOver(UI.Score, UI.HighScore, UI);
+                    frm.Show();
+                    GameOver = true;
+                }
+            }
             p.Graphics.FillRectangle(BAR_COLOR, new Rectangle(BarPositionX - (BAR_WIDTH / 2), BarPositionY, BAR_WIDTH, BAR_HEIGHT));
         }
     }
